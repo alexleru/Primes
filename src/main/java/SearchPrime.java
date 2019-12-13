@@ -23,7 +23,7 @@ public class SearchPrime {
         var result = true;
         var halfBigInteger = checkInt.divide(BigInteger.TWO);
         for (BigInteger bigInteger : oldArrayFromPrime) {
-            if(bigInteger.compareTo(halfBigInteger) == 1) break;
+            if (bigInteger.compareTo(halfBigInteger) > 0) break;
             if (checkInt.mod(bigInteger).equals(BigInteger.ZERO)) {
                 result = false;
                 break;
@@ -36,7 +36,7 @@ public class SearchPrime {
         var max = oldArrayFromPrime.get(0);
 
         for (int i = 1; i < oldArrayFromPrime.size(); i++) {
-            if (oldArrayFromPrime.get(i).compareTo(max) == 1) {
+            if (oldArrayFromPrime.get(i).compareTo(max) > 0) {
                 max = oldArrayFromPrime.get(i);
             }
         }
